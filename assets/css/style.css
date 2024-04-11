@@ -9,6 +9,7 @@
     font-family: "Gaegu", sans-serif;
 }
 
+/* Game container */
 body {
     display: flex;
     min-height: 100vh;
@@ -28,11 +29,35 @@ body {
 }
 
 .stockade-box img {
-    max-width: 300px;
+    max-width: 400px;
 }
 
 .stockade-box h1 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.guess-word {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.guess-word .guess-letter {
+    width: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+    border-bottom: 2px solid #000;
+    margin-bottom: 40px;
+}
+
+.guess-word .guess-letter.guessed {
+    border-color: transparent;
+    /* Adjusts margin so underline is in-line with unguessed words */
+    margin: -40px 0 25px;
 }
