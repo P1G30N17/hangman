@@ -1,0 +1,10 @@
+/* Importing Google font - Gaegu static */
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+/* Asterisk wildcard selector to override universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gaegu", sans-serif;
+}
