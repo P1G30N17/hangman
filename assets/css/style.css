@@ -28,6 +28,7 @@ body {
     border-radius: 15px;
 }
 
+/* Stockade image styling */
 .stockade-box img {
     max-width: 400px;
 }
@@ -38,6 +39,7 @@ body {
     text-align: center;
 }
 
+/* Hidden word styling */
 .guess-word {
     display: flex;
     list-style: none;
@@ -60,4 +62,43 @@ body {
     border-color: transparent;
     /* Adjusts margin so underline is in-line with unguessed words */
     margin: -40px 0 25px;
+}
+
+/* Hint and attempts styling */
+.game-box h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.game-box h4 b {
+    font-weight: 600;
+}
+
+.game-box .attempts-text b {
+    color: red;
+}
+
+/* Screen Keyboard styling */
+.game-box .screen-keyboard {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.screen-keyboard button {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #5f5f5f;
+    text-transform: uppercase;
+    /* Keeps screen keys in a set size and spacing */
+    width: calc(100% / 9 - 5px);
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    padding: 6px;
 }
