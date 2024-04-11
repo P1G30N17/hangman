@@ -86,6 +86,7 @@ body {
     gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .screen-keyboard button {
@@ -94,11 +95,16 @@ body {
     font-weight: 600;
     background: #5f5f5f;
     text-transform: uppercase;
-    /* Keeps screen keys in a set size and spacing */
-    width: calc(100% / 9 - 5px);
+    /* Keeps screen keys in set layout */
+    /* Note: Could not set keys into proper QWERTY keyboard layout */
+    width: calc(100% / 10 - 5px);
     cursor: pointer;
     outline: none;
     border-radius: 3px;
     border: none;
     padding: 6px;
+}
+
+.screen-keyboard button:hover {
+    background: #c5c5c5;
 }
