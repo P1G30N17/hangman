@@ -19,7 +19,8 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 900px;
+    height: 90%;
     background: #fff;
     display: flex;
     align-items: flex-end;
@@ -34,7 +35,7 @@ body {
 }
 
 .stockade-box h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
 }
