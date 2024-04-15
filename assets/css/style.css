@@ -108,3 +108,20 @@ body {
 .screen-keyboard button:hover {
     background: #c5c5c5;
 }
+
+/* Media queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px 15px;
+        align-items: center;
+    }
+    
+    .stockade-box img {
+        max-width: 250px;
+    }
+
+    .stockade-box h1 {
+        display: none;
+    }
+}
