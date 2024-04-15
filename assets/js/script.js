@@ -1,9 +1,13 @@
+const screenKeyboardDiv = document.querySelector(".screen-keyboard");
+const guessWord = document.querySelector(".guess-word");
+
 const getRandomWord = () => {
     // Selects a random word and corresponding hint from wordList.js
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
-    console.log(word, hint);
+    console.log(word);
+    guessWord.innerHTML = word.split("").map(() => `<li class="guess-letter"></li>`).join("");
+    document.querySelector(".help-text b").innerText = hint; 
 }
-const screenKeyboardDiv = document.querySelector(".screen-keyboard");
 
 // Dynamically creating keyboard
 for (let i = 97; i <= 122; i++) {
