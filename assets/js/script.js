@@ -43,3 +43,10 @@ for (let i = 97; i <= 122; i++) {
 }
 
 getRandomWord();
+
+function showHint() {
+    var x = document.querySelector(".help-text");
+    x.style.display = "block";
+    var y = document.querySelector(".help-div");
+    y.style.display = "none";
+};

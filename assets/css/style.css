@@ -80,6 +80,28 @@ body {
     color: red;
 }
 
+/* Hides hint text until user toggles it back on */
+.help-text {
+    display: none;
+}
+
+.help-div {
+    display: flex;
+    justify-content: center;
+}
+
+.help-button {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #5f5f5f;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    padding: 6px;
+}
+
 /* Screen Keyboard styling */
 .game-box .screen-keyboard {
     display: flex;
@@ -104,7 +126,7 @@ body {
     padding: 6px;
 }
 
-.screen-keyboard button:hover {
+button:hover {
     background: #c5c5c5;
 }
 
