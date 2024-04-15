@@ -18,6 +18,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>Hangman</title>
+    <!-- 'defer' is a Boolean attribute set to indicate to a browser that the script is meant to be 
+    executed after the document has been parsed, but before firing DOMContentLoaded -->
+    <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>
@@ -42,11 +45,7 @@
                 Attempts left:
                 <b>6 / 6</b>
             </h4>
-            <div class="screen-keyboard">
-                <button>q</button><button>w</button><button>e</button><button>r</button><button>t</button><button>y</button><button>u</button><button>i</button><button>o</button><button>p</button>
-                <button>a</button><button>s</button><button>d</button><button>f</button><button>g</button><button>h</button><button>j</button><button>k</button><button>l</button>
-                <button>z</button><button>x</button><button>c</button><button>v</button><button>b</button><button>n</button><button>m</button>
-            </div>
+            <div class="screen-keyboard"></div>
         </div>
     </div>
 

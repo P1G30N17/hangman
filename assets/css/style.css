@@ -97,7 +97,6 @@ body {
     text-transform: uppercase;
     /* Keeps screen keys in set layout */
     width: calc(100% / 10 - 5px);
-    /* Note: Could not set keys into proper QWERTY keyboard layout */
     cursor: pointer;
     outline: none;
     border-radius: 3px;
