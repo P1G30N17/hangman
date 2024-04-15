@@ -5,6 +5,9 @@ const getRandomWord = () => {
     // Selects a random word and corresponding hint from wordList.js
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
     console.log(word);
+    /*  Creates list of the words length and inserts the guessWord letters into the list.
+        Code taken from  'https://www.codingnepalweb.com/' author: Coding Nepal
+    */
     guessWord.innerHTML = word.split("").map(() => `<li class="guess-letter"></li>`).join("");
     document.querySelector(".help-text b").innerText = hint; 
 }
