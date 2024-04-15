@@ -1,9 +1,12 @@
 const screenKeyboardDiv = document.querySelector(".screen-keyboard");
 const guessWord = document.querySelector(".guess-word");
 
+let chosenWord;
+
 const getRandomWord = () => {
     // Selects a random word and corresponding hint from wordList.js
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
+    chosenWord = word;
     console.log(word);
     /*  Creates list of the words length and inserts the guessWord letters into the list.
         Code taken from  'https://www.codingnepalweb.com/' author: Coding Nepal
@@ -12,7 +15,16 @@ const getRandomWord = () => {
     document.querySelector(".help-text b").innerText = hint; 
 }
 
-// Dynamically creating keyboard
+const initGame = (button, clickedLetter) => {
+    // Checks if the clicked letter is in the chosenWord
+    if(currentWord.includes(clickedLetter)) {
+        console.log(clickedLetter, " is in the word");
+    } else {
+        console.log(clickedLetter, " is not in the word");
+    }
+}
+
+// Dynamically creating keyboard and adding event listeners
 for (let i = 97; i <= 122; i++) {
     const button = document.createElement("button"); 
     /*  String.fromCharCode is a static method that returns a string created 
@@ -21,6 +33,7 @@ for (let i = 97; i <= 122; i++) {
     */
     button.innerText = String.fromCharCode(i); 
     screenKeyboardDiv.appendChild(button); 
+    button.addEventListener("click", e => initGame(e.target, String.fromCharCode(i)))
 }
 
 getRandomWord();
