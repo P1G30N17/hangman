@@ -1,7 +1,10 @@
 const screenKeyboardDiv = document.querySelector(".screen-keyboard");
+const attemptsText = document.querySelector(".attempts-text b");
 const guessWord = document.querySelector(".guess-word");
 
 let chosenWord;
+let wrongGuessCount = 6;
+const maxGuesses = 6;
 
 const getRandomWord = () => {
     // Selects a random word and corresponding hint from wordList.js
@@ -26,8 +29,9 @@ const initGame = (button, clickedLetter) => {
             }
         });
     } else {
-        console.log(clickedLetter, " is not in the word");
+        wrongGuessCount --;
     }
+    attemptsText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
 }
 
 // Dynamically creating keyboard and adding event listeners
