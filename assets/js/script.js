@@ -18,7 +18,13 @@ const getRandomWord = () => {
 const initGame = (button, clickedLetter) => {
     // Checks if the clicked letter is in the chosenWord
     if(currentWord.includes(clickedLetter)) {
-        console.log(clickedLetter, " is in the word");
+        //Displays the correct guessed letters in the hidden word area.
+        [...currentWord].forEach((letter, index) => {
+            if (letter === clickedLetter) {
+                guessWord.querySelectorAll("li")[index].innerText = letter;
+                guessWord.querySelectorAll("li")[index].classList.add("guessed");
+            }
+        });
     } else {
         console.log(clickedLetter, " is not in the word");
     }
