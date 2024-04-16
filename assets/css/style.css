@@ -130,6 +130,11 @@ button:hover {
     background: #c5c5c5;
 }
 
+.screen-keyboard button[disabled] {
+    background: #c5c5c5;
+    pointer-events: none;
+}
+
 /* Media queries */
 @media (max-width: 768px) {
     .container {
