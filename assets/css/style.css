@@ -22,10 +22,12 @@ body {
     width: 900px;
     background: #fff;
     display: flex;
-    align-items: flex-end;
     gap: 40px;
     padding: 40px;
     border-radius: 15px;
+    flex-direction: column;
+    padding: 20px 15px;
+    align-items: center;
 }
 
 /* Stockade image styling */
@@ -133,21 +135,4 @@ button:hover {
 .screen-keyboard button[disabled] {
     background: #c5c5c5;
     pointer-events: none;
-}
-
-/* Media queries */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 20px 15px;
-        align-items: center;
-    }
-    
-    .stockade-box img {
-        max-width: 250px;
-    }
-
-    .stockade-box h1 {
-        display: none;
-    }
 }
