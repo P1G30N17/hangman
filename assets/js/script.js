@@ -5,6 +5,7 @@ const hangmanStockImage = document.querySelector(".stockade-box img");
 
 let chosenWord;
 let wrongGuessCount = 6;
+let numberOfLetters = [];
 const maxGuesses = 6;
 
 const getRandomWord = () => {
@@ -27,6 +28,7 @@ const initGame = (button, clickedLetter) => {
             if (letter === clickedLetter) {
                 guessWord.querySelectorAll("li")[index].innerText = letter;
                 guessWord.querySelectorAll("li")[index].classList.add("guessed");
+                numberOfLetters.push(letter);
             }
         });
     } else {
@@ -35,6 +37,15 @@ const initGame = (button, clickedLetter) => {
     }
     button.disabled = true;
     attemptsText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
+
+    if (wrongGuessCount === 0) {
+        alert("Unlucky, you were unable to guess the correct word")
+    } 
+    if (numberOfLetters.length === chosenWord.length) {
+        alert("Congratulations, you guessed correctly.");
+    }
+    console.log(numberOfLetters.length);
+    console.log(chosenWord.length);
 }
 
 // Dynamically creating keyboard and adding event listeners
