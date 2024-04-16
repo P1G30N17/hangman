@@ -58,16 +58,24 @@ const initGame = (button, clickedLetter) => {
     attemptsText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
 
     if (wrongGuessCount === 0) {
-        alert("Unlucky, you were unable to guess the correct word")
+        Swal.fire({
+            title: "Unlucky. The word was " + chosenWord,
+            confirmButtonText: "Try Again"
+          });
         resetGame();
         getRandomWord();
         document.querySelector(".help-text").style.display = "none"
         document.querySelector(".help-div").style.display = "flex"
-    } 
+    }
     if (numberOfLetters.length === chosenWord.length) {
-        alert("Congratulations, you guessed correctly.");
+        Swal.fire({
+            title: "Congratualtions. The word was " + chosenWord,
+            confirmButtonText: "Play Again"
+          });
         resetGame();
         getRandomWord();
+        document.querySelector(".help-text").style.display = "none"
+        document.querySelector(".help-div").style.display = "flex"
     }
 }
 
