@@ -16,6 +16,8 @@ function resetGame() {
     wrongGuessCount = 6;
     hangmanStockImage.src = `assets/images/hangman-${wrongGuessCount}.png`
     attemptsText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
+    document.querySelector(".help-text").style.display = "none"
+    document.querySelector(".help-div").style.display = "flex"
     guessWord.innerHTML = chosenWord.split("").map(() => `<li class="guess-letter"></li>`).join("");
     screenKeyboardDiv.querySelectorAll("button").forEach(button => button.disabled = false);
 }
@@ -64,8 +66,6 @@ const initGame = (button, clickedLetter) => {
           });
         resetGame();
         getRandomWord();
-        document.querySelector(".help-text").style.display = "none"
-        document.querySelector(".help-div").style.display = "flex"
     }
     if (numberOfLetters.length === chosenWord.length) {
         Swal.fire({
@@ -74,8 +74,6 @@ const initGame = (button, clickedLetter) => {
           });
         resetGame();
         getRandomWord();
-        document.querySelector(".help-text").style.display = "none"
-        document.querySelector(".help-div").style.display = "flex"
     }
 }
 
