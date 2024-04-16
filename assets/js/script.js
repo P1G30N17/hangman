@@ -4,24 +4,43 @@ const guessWord = document.querySelector(".guess-word");
 const hangmanStockImage = document.querySelector(".stockade-box img");
 
 let chosenWord;
-let wrongGuessCount = 6;
-let numberOfLetters = [];
+let wrongGuessCount;
+let numberOfLetters;
 const maxGuesses = 6;
 
+/** 
+*Resets the game and all parameters
+*/
+function resetGame() {
+    numberOfLetters = [];
+    wrongGuessCount = 6;
+    hangmanStockImage.src = `assets/images/hangman-${wrongGuessCount}.png`
+    attemptsText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
+    guessWord.innerHTML = chosenWord.split("").map(() => `<li class="guess-letter"></li>`).join("");
+    screenKeyboardDiv.querySelectorAll("button").forEach(button => button.disabled = false);
+}
+
+/**
+ * Selects a random word and corresponding hint from wordList.js
+ */
 const getRandomWord = () => {
-    // Selects a random word and corresponding hint from wordList.js
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
     chosenWord = word;
     console.log(word);
     /*  Creates list of the words length and inserts the guessWord letters into the list.
-        Code taken from  'https://www.codingnepalweb.com/' author: Coding Nepal
     */
     guessWord.innerHTML = word.split("").map(() => `<li class="guess-letter"></li>`).join("");
     document.querySelector(".help-text b").innerText = hint; 
+    resetGame();
 }
 
+
+/**
+ * Checks if the clicked letter is in the chosenWord
+ * @param {*} button 
+ * @param {*} clickedLetter 
+ */
 const initGame = (button, clickedLetter) => {
-    // Checks if the clicked letter is in the chosenWord
     if(chosenWord.includes(clickedLetter)) {
         //Displays the correct guessed letters in the hidden word area.
         [...chosenWord].forEach((letter, index) => {
@@ -40,12 +59,16 @@ const initGame = (button, clickedLetter) => {
 
     if (wrongGuessCount === 0) {
         alert("Unlucky, you were unable to guess the correct word")
+        resetGame();
+        getRandomWord();
+        document.querySelector(".help-text").style.display = "none"
+        document.querySelector(".help-div").style.display = "flex"
     } 
     if (numberOfLetters.length === chosenWord.length) {
         alert("Congratulations, you guessed correctly.");
+        resetGame();
+        getRandomWord();
     }
-    console.log(numberOfLetters.length);
-    console.log(chosenWord.length);
 }
 
 // Dynamically creating keyboard and adding event listeners
@@ -62,6 +85,9 @@ for (let i = 97; i <= 122; i++) {
 
 getRandomWord();
 
+/**
+ * Displays chosen word hint linked via word-list.js
+ */
 function showHint() {
     var x = document.querySelector(".help-text");
     x.style.display = "block";
