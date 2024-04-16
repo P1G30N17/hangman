@@ -25,7 +25,7 @@ function resetGame() {
 /**
  * Selects a random word and corresponding hint from wordList.js
  */
-const getRandomWord = () => {
+function getRandomWord() {
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
     chosenWord = word;
     console.log(word);
@@ -42,7 +42,7 @@ const getRandomWord = () => {
  * @param {*} button 
  * @param {*} clickedLetter 
  */
-const initGame = (button, clickedLetter) => {
+function initGame(button, clickedLetter) {
     if(chosenWord.includes(clickedLetter)) {
         //Displays the correct guessed letters in the hidden word area.
         [...chosenWord].forEach((letter, index) => {
