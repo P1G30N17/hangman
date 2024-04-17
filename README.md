@@ -17,67 +17,77 @@ The Hangman game is a simple one page project, where the user is presented with 
 
 - __The Game__
 
-  - Featured on all pages (even pages that are not assocaited with the site structure, such as the submit results page or the league application page). 
-  - This will allow the user to quickly navigate to a desired page, as well as indicate which page they are currently on via the nav tab being highlighted. 
+  - Taking center stage is the game container and within it the hangman game.
+  - The user has everything right in front of them with which to interact and play the game.
 
-![Nav Bar](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/navbar.png)
+![The Game](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/navbar.png)
 
 - __The Hangman Stockade__
 
-  - The landing page image captures the user's attention with a game of Warhammer 40K in play.
-  - This image captures most elements of a game of Warhammer 40K, player interaction, dice, miniature figurines and thematic scenery and board. 
+  - This is the classic hangman stockade associated with almost all iterations of the hangman game.
+  - The stickman will, piece by piece, be drawn onto the stock as if he is being hung.
+  - This acts as a visual queu to the user for the number of attempts left  to guess the word and helps to portray the gravity of the situation. 
 
-![Landing Page](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/landing-image.png)
+![The Hangman Stockade](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/landing-image.png)
 
 - __The hidden word__
 
-  - This section pulls the user in with a well known 40K character, Abbadon the Despoiler and a Norn Emmissary, surrounded by text that conveys the question to the user, the benefits of joining a league. 
-  - These statements will stand to answer the users question of why would they want to join a 40K league. 
-  - The statements vary from a casual environment to someone with high degree of skill in playing 40K enabling the webpage to draw in both new and veteran players of Warhammer 40K.
-  -This section is responsive in that on small screen the norn-emmissary image is removed and abbadon image is place at the bottom, as opposed to the 4 quadrant display on larger screens.
+  - Here the user will be offered a word, that they must guess, hidden by underscores until a correct letter is guessed.
+  - Upon the correct choice of letter the underscore will be removed and the afore mentioned correct letter will replace it.
+  - This helps to give a visual queue to the user as to what the word could potentially be.
 
-![Why join a league?](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/why-join.png)
+![The hidden word](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/why-join.png)
+
+- __Attempts left indicator__ 
+
+- This is a more direct indicator of how many attempts the user has to guess the correct word.
+- This helps to assist new users, or users who have never played hangman before associate the number of attempts left with the parts left on the hangman body in the stockade image.
+
+![Attempts left indicator](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/footer.png)
 
 - __The hint button and hint text__ 
 
-  - The footer contains links to 3 different tabletop gaming clubs in and around Newbury, Berkshire, UK. These open in a new page when the Facebook icon is clicked. 
-  - Let it be known that each footer link is a Facebook group, and as such the variation in social media is limited as the groups all operate on different days via their corresponding Facebook groups.
-  -These Facebook links will help a user find a night and club that best suits their schedule.
+  - The user can click on the hint button to reveal a hint associated with the current hidden word.
+  - The hint button disappears upon click and the hint remains on screen until the user either is succesful or not.
+  - Upon a new game iniating the hint disappears for the old word and the hint button returns linked to the new word hint.
 
-![Footer](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/footer.png)
+![Hint Button and hint text](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/footer.png)
 
 - __The onscreen keyboard__
 
-  - The league page is where both new and current users will navigate to, to find information pertaining to the current league standings and their league game matchups.
-  - The page is basic in its design in that it conveys the exact specifics of what a user would need to determine their position in the league and who they have to play within the current month to score points on the leaderboard.
-  - Below the league matchups are where a user would interact to navigate to their corresponding need of the website, either they would be submitting their results, or they would be applying to join the next league.
-  - Let it be known that I would like this page to become a lot more advanced in the future, hopefully to include a responsive table that pulls results from a realtime database and updates the league standing and matchups automatically as opposed to manually entering the results and matchups for each month. 
+  - The intention for an onscreen keyboard was to simplify the process across mobile, tablet and desktop.
+  - The user is given the ability to select a letter from an onscreen keyboard representing the english alphabet.
+  - Once a key is clicked, whether it is right or wrong for the hidden word, it is then grey out and unclickable so as to avoid a user using up for than one attempt on a repeated letter.
 
-![The League](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/the-league.png)
+![The onscreen keyboard](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/the-league.png)
+
+- __Victory and Game Over message__
+
+- Once the user has guessed the correct word within the given attempts limit, they are shown a victory message.
+- Once the user has failed to guess the correct word within the given attempts limit, they are shown a game over message.
+- Both messages offer a 'Play again' and 'Try again' button respectively that will reset the game, choose a new hidden word and hide the hint text (if clicked previously).
+
+![Victory and Game Over message](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/the-league.png)
 
 ### Features Left to Implement
 
-- User Login.
-- Results submission to a realtime database.
-- League table updates pulled from the above realtime database.
-- Catchup game mechanic for new users wishing to join an ongoing league season.
-- User photo submissions from league games.
-- Add a rules and information page once the old newbury40kleague.com webpage is phased out, with updated and streamlined information, along with a potential polling system for league rules and costs. (currently the league is free)
+- Game Difficulty
+- Score Tracker
 
 ## Testing 
 
-- The Newbury 40K League project was tested on the following devices: Desktop pc (1920 x 1080), iPad Air (2360 x 1640) and iPhone XR (1792 × 828) along with the Google Chrome inspect tool for responive dimension testing.
-- The Newbury 40K League project was tested on the following web browsers: Google Chrome, Microsoft Edge and Mozilla Firefox.
+- This Classic Hangman game project was tested on the following devices: Desktop pc (1920 x 1080), iPad Air (2360 x 1640) and iPhone XR (1792 × 828) along with the Google Chrome inspect tool for responive dimension testing.
+- This Classic Hangman game project was tested on the following web browsers: Google Chrome, Microsoft Edge and Safari.
 
 ### Device Testing
 - The project is responsive in almost all dimensions bar a few outliers such as a smart watch.
-- This was done by multiple commits and adjustments throughout the project inception to incorporate a wide array of dimensions, this mainly including allowing the text and information to nicely nest on the page for the user in a clear and coherent manor.
+- This was achieved in a sense due to the simplicity of the game, the game container scales to almost all device sizes allowing multiple platforms to play the game.
 
 ![Responsive Mockup](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/viewports.png)
 
 ### Web Browser Testing
 
-- The project obtained a decent lighthouse rating with the Google Lighthouse Dev Tool, however future code could be implemented to allow the images to load faster as that seems to be pulling the overall score down.
+- The project obtained a great lighthouse rating with the Google Lighthouse Dev Tool.
 
 ![Lighthouse Score](https://p1g30n17.github.io/newbury-40k-league/assets/readme-media/lighthouse.png)
 
@@ -85,16 +95,13 @@ The Hangman game is a simple one page project, where the user is presented with 
 
 ### Page Testing
 
-- I have checked that all the navbar links work correctly and take the user to the correct pages.
-- I have checked that all submission buttons are active and submit the user's input to the Code Institute form dump page with the correct attributes.
-- I have checked that all user input requests are correct, and inform the user when an input request is incorrect or empty.
+- I have checked that the game loads a new game correctly after each attempt, success or failure included.
+- I have checked that all on screen keyboard buttons return the correct keystroke.
+- I have checked that the hint button reveals the correct word hint linked to its associated word.
 
 ### Bugs
 
-- When testing the project in Mozilla Firefox I encountered an error when trying to remove the number spinner from the number input request on the Submit Results page, I used the following code to solve the problem:
-- #submit-results-form input[type='number'] {
-    -moz-appearance: textfield;
-}
+- I have found on the rare occasion that the game will load the same word twice in a row. This is due to the word being selected randomly from a list of words. As the size of the list is increased the probability of this bug occuring will be less but not zero. A potential fix could be to add an if statement remembering the numbers of previous words pulled from the list and excluding those from future word pulls.
 
 ### Validator Testing 
 
@@ -102,10 +109,12 @@ The Hangman game is a simple one page project, where the user is presented with 
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+- Javascript
+  - 
 
 ### Unfixed Bugs
 
-- None. 
+- As stated in the previous bugs section, the potential for the same word to be selected twice. 
 
 ## Deployment
 

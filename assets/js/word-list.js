@@ -14,34 +14,34 @@ const wordList = [
     },
     {
         word: "homework",
-        hint: "schoolwork that a pupil is required to do at home."
+        hint: "Schoolwork that a pupil is required to do at home."
     },
     {
         word: "motorway",
-        hint: "a major road that has been specially built for fast travel over long distances."
+        hint: "A major road that has been specially built for fast travel over long distances."
     },
     {
         word: "garden",
-        hint: "a piece of ground adjoining a house, in which grass, flowers, and shrubs may be grown."
+        hint: "A piece of ground adjoining a house, in which grass, flowers, and shrubs may be grown."
     },
     {
         word: "playground",
-        hint: "an area used for outdoor play or recreation, especially by children."
+        hint: "An area used for outdoor play or recreation, especially by children."
     },
     {
         word: "football",
-        hint: "game played by two teams in which each team tries to kick the ball into the opposing team's goal to score points."
+        hint: "Game played by two teams in which each team tries to kick the ball into the opposing team's goal to score points."
     },
     {
         word: "vehicle",
-        hint: "a thing used for transporting people or goods, especially on land, such as a car, lorry, or cart."
+        hint: "A thing used for transporting people or goods, especially on land, such as a car, lorry, or cart."
     },
     {
         word: "chessboard",
-        hint: "a square board divided into 64 smaller squares, half of which are light and the other half dark in colour."
+        hint: "A square board divided into 64 smaller squares, half of which are light and the other half dark in colour."
     },
     {
         word: "school",
-        hint: "an institution for educating children."
+        hint: "An institution for educating children."
     },
 ];

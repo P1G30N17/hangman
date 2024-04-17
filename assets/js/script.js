@@ -28,9 +28,7 @@ function resetGame() {
 function getRandomWord() {
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
     chosenWord = word;
-    console.log(word);
-    /*  Creates list of the words length and inserts the guessWord letters into the list.
-    */
+    // Creates list of the words length and inserts the guessWord letters into the list.
     guessWord.innerHTML = word.split("").map(() => `<li class="guess-letter"></li>`).join("");
     document.querySelector(".help-text b").innerText = hint; 
     resetGame();
@@ -69,7 +67,7 @@ function initGame(button, clickedLetter) {
     }
     if (numberOfLetters.length === chosenWord.length) {
         Swal.fire({
-            title: "Congratualtions. The word was " + chosenWord,
+            title: "Congratulations. The word was " + chosenWord,
             confirmButtonText: "Play Again"
           });
         resetGame();
