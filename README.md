@@ -110,7 +110,7 @@ The Hangman game is a simple one page project, where the user is presented with 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
 - Javascript
-  - 
+  - No errors were found but a few warnings were noted when passing through the official [(JSHint) validator](https://jshint.com/)
 
 ### Unfixed Bugs
 

@@ -4,6 +4,7 @@ const guessWord = document.querySelector(".guess-word");
 const hangmanStockImage = document.querySelector(".stockade-box img");
 
 let chosenWord;
+let wordList;
 let wrongGuessCount;
 let numberOfLetters;
 const maxGuesses = 6;
@@ -14,10 +15,10 @@ const maxGuesses = 6;
 function resetGame() {
     numberOfLetters = [];
     wrongGuessCount = 6;
-    hangmanStockImage.src = `assets/images/hangman-${wrongGuessCount}.png`
+    hangmanStockImage.src = `assets/images/hangman-${wrongGuessCount}.png`;
     attemptsText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
-    document.querySelector(".help-text").style.display = "none"
-    document.querySelector(".help-div").style.display = "flex"
+    document.querySelector(".help-text").style.display = "none";
+    document.querySelector(".help-div").style.display = "flex";
     guessWord.innerHTML = chosenWord.split("").map(function() {return `<li class="guess-letter"></li>`}).join("");
     screenKeyboardDiv.querySelectorAll("button").forEach(function(button) {button.disabled = false});
 }
@@ -52,7 +53,7 @@ function initGame(button, clickedLetter) {
         });
     } else {
         wrongGuessCount --;
-        hangmanStockImage.src = `assets/images/hangman-${wrongGuessCount}.png`
+        hangmanStockImage.src = `assets/images/hangman-${wrongGuessCount}.png`;
     }
     button.disabled = true;
     attemptsText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
@@ -97,4 +98,4 @@ function showHint() {
     x.style.display = "block";
     var y = document.querySelector(".help-div");
     y.style.display = "none";
-};
+}
