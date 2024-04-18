@@ -84,7 +84,7 @@ for (let i = 97; i <= 122; i++) {
     */
     button.innerText = String.fromCharCode(i); 
     screenKeyboardDiv.appendChild(button); 
-    button.addEventListener("click", function (e) {initGame(e.target, String.fromCharCode(i))});
+    button.addEventListener("click", function (event) {initGame(event.target, String.fromCharCode(i))});
 }
 
 getRandomWord();
