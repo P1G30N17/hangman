@@ -40,7 +40,7 @@ function getRandomWord() {
  * @param {*} button 
  * @param {*} clickedLetter 
  */
-function initGame(button, clickedLetter) {
+function runGame(button, clickedLetter) {
     if(chosenWord.includes(clickedLetter)) {
         //Displays the correct guessed letters in the hidden word area.
         [...chosenWord].forEach(function (letter, index) {
@@ -84,7 +84,7 @@ for (let i = 1; i <= 26; i++) {
     */
     button.innerText = String.fromCharCode(96+i); 
     screenKeyboardDiv.appendChild(button); 
-    button.addEventListener("click", function (event) {initGame(event.target, String.fromCharCode(96+i))});
+    button.addEventListener("click", function (event) {runGame(event.target, String.fromCharCode(96+i))});
 }
 
 getRandomWord();
