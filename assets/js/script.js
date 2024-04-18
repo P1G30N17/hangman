@@ -4,7 +4,6 @@ const guessWord = document.querySelector(".guess-word");
 const hangmanStockImage = document.querySelector(".stockade-box img");
 
 let chosenWord;
-let wordList;
 let wrongGuessCount;
 let numberOfLetters;
 const maxGuesses = 6;
@@ -77,15 +76,15 @@ function initGame(button, clickedLetter) {
 }
 
 // Dynamically creating keyboard and adding event listeners
-for (let i = 97; i <= 122; i++) {
+for (let i = 1; i <= 26; i++) {
     const button = document.createElement("button"); 
     /*  String.fromCharCode is a static method that returns a string created 
         from the specified sequence of UTF-16 code units.
         97 is 'a' and 122 is 'z' on the ASCII table.
     */
-    button.innerText = String.fromCharCode(i); 
+    button.innerText = String.fromCharCode(96+i); 
     screenKeyboardDiv.appendChild(button); 
-    button.addEventListener("click", function (event) {initGame(event.target, String.fromCharCode(i))});
+    button.addEventListener("click", function (event) {initGame(event.target, String.fromCharCode(96+i))});
 }
 
 getRandomWord();
