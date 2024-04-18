@@ -43,7 +43,7 @@ function getRandomWord() {
 function initGame(button, clickedLetter) {
     if(chosenWord.includes(clickedLetter)) {
         //Displays the correct guessed letters in the hidden word area.
-        [...chosenWord].forEach((letter, index) => {
+        [...chosenWord].forEach(function (letter, index) {
             if (letter === clickedLetter) {
                 guessWord.querySelectorAll("li")[index].innerText = letter;
                 guessWord.querySelectorAll("li")[index].classList.add("guessed");
