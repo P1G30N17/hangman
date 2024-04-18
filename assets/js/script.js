@@ -2,6 +2,7 @@ const screenKeyboardDiv = document.querySelector(".screen-keyboard");
 const attemptsText = document.querySelector(".attempts-text b");
 const guessWord = document.querySelector(".guess-word");
 const hangmanStockImage = document.querySelector(".stockade-box img");
+const showHintBtn = document.querySelector("help-button");
 
 let chosenWord;
 let wrongGuessCount;
@@ -19,7 +20,7 @@ function resetGame() {
     document.querySelector(".help-text").style.display = "none"
     document.querySelector(".help-div").style.display = "flex"
     guessWord.innerHTML = chosenWord.split("").map(function() {return `<li class="guess-letter"></li>`}).join("");
-    screenKeyboardDiv.querySelectorAll("button").forEach(button => button.disabled = false);
+    screenKeyboardDiv.querySelectorAll("button").forEach(function(button) {button.disabled = false});
 }
 
 /**
@@ -98,3 +99,5 @@ function showHint() {
     var y = document.querySelector(".help-div");
     y.style.display = "none";
 };
+
+showHintBtn.addEventListener("click", showHint);
