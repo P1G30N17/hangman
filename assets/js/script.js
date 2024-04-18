@@ -18,7 +18,7 @@ function resetGame() {
     attemptsText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
     document.querySelector(".help-text").style.display = "none"
     document.querySelector(".help-div").style.display = "flex"
-    guessWord.innerHTML = chosenWord.split("").map(() => `<li class="guess-letter"></li>`).join("");
+    guessWord.innerHTML = chosenWord.split("").map(function() {return `<li class="guess-letter"></li>`}).join("");
     screenKeyboardDiv.querySelectorAll("button").forEach(button => button.disabled = false);
 }
 
@@ -29,7 +29,7 @@ function getRandomWord() {
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
     chosenWord = word;
     // Creates list of the words length and inserts the guessWord letters into the list.
-    guessWord.innerHTML = word.split("").map(() => `<li class="guess-letter"></li>`).join("");
+    guessWord.innerHTML = word.split("").map(function() {return `<li class="guess-letter"></li>`}).join("");
     document.querySelector(".help-text b").innerText = hint; 
     resetGame();
 }
@@ -84,7 +84,7 @@ for (let i = 97; i <= 122; i++) {
     */
     button.innerText = String.fromCharCode(i); 
     screenKeyboardDiv.appendChild(button); 
-    button.addEventListener("click", e => initGame(e.target, String.fromCharCode(i)))
+    button.addEventListener("click", function (e) {initGame(e.target, String.fromCharCode(i))});
 }
 
 getRandomWord();
