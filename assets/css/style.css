@@ -136,3 +136,10 @@ button:hover {
     background: #c5c5c5;
     pointer-events: none;
 }
+
+/* Media Query for smaller devices */
+@media screen and (max-width: 424px) {
+    .stockade-box img {
+        max-width: 250px;
+    }
+}
