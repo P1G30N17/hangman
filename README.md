@@ -36,14 +36,14 @@ The Hangman game is a simple one page project, where the user is presented with 
   - Upon the correct choice of letter the underscore will be removed and the afore mentioned correct letter will replace it.
   - This helps to give a visual queue to the user as to what the word could potentially be.
 
-![The guess word](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/guess-word.png)
+![The guess word](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/guess-word.png)
 
 - __Attempts left indicator__ 
 
 - This is a more direct indicator of how many attempts the user has to guess the correct word.
 - This helps to assist new users, or users who have never played hangman before associate the number of attempts left with the parts left on the hangman body in the stockade image.
 
-![Attempts left indicator](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/attempts.png)
+![Attempts left indicator](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/attempts.png)
 
 - __The hint button and hint text__ 
 
