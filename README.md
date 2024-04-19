@@ -28,7 +28,8 @@ The Hangman game is a simple one page project, where the user is presented with 
   - The stickman will, piece by piece, be drawn onto the stock as if he is being hung.
   - This acts as a visual queu to the user for the number of attempts left  to guess the word and helps to portray the gravity of the situation. 
 
-![The Hangman Stockade](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/stockade-1.png)(https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/stockade-2.png)
+![The Hangman Stockade-1](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/stockade-1.png)
+![The Hangman Stockade-2](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/stockade-2.png)
 
 - __The word to guess__
 
@@ -51,7 +52,8 @@ The Hangman game is a simple one page project, where the user is presented with 
   - The hint button disappears upon click and the hint remains on screen until the user either is succesful or not.
   - Upon a new game iniating the hint disappears for the old word and the hint button returns linked to the new word hint.
 
-![Hint Button and hint text](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/hint-1.png)(https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/hint-2.png)
+![Hint Button and hint text-1](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/hint-1.png)
+![Hint Button and hint text-2](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/hint-2.png)
 
 - __The onscreen keyboard__
 
@@ -67,7 +69,8 @@ The Hangman game is a simple one page project, where the user is presented with 
 - Once the user has failed to guess the correct word within the given attempts limit, they are shown a game over message.
 - Both messages offer a 'Play again' and 'Try again' button respectively that will reset the game, choose a new hidden word and hide the hint text (if clicked previously).
 
-![Victory and Game Over message](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/victory.png)(https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/game-over.png)
+![Victory and Game Over message-1](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/victory.png)
+![Victory and Game Over message-2](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/game-over.png)
 
 ### Features Left to Implement
 
