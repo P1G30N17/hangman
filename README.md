@@ -2,7 +2,7 @@
 
 Classic hangman is a throw back to the old hangman game we used to play as kids. A simple stick man drawing portrays the end result of failure (being hung), and failure being unable to guess the hidden word. The user is given a basic layout and simple on screen keyboard with which to input their chosen letter in an attempt to guess the hidden word and save the stickman from being hung. If the user is struggling their is a hint option that when clicked will reveal helpful information associated with the hidden word in question. My inspiration for this game came from my two sons who love playing old school games like this on our digital white board with me, along with 'I spy' and 'Pictionary', Hangman is a great way for them to improve their vocabulary. As such a majority of the words used in this game are catered towards their academic level, Year 6 and below. 
 
-![Responsive Mockup](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/viewports.png)
+![Responsive Mockup](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/viewports.png)
 
 ## User Stories
 - A quick and fun way to test my vocab knowledge.
@@ -20,7 +20,7 @@ The Hangman game is a simple one page project, where the user is presented with 
   - Taking center stage is the game container and within it the hangman game.
   - The user has everything right in front of them with which to interact and play the game.
 
-![The Game](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/game.png)
+![The Game](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/game.png)
 
 - __The Hangman Stockade__
 
@@ -28,7 +28,7 @@ The Hangman game is a simple one page project, where the user is presented with 
   - The stickman will, piece by piece, be drawn onto the stock as if he is being hung.
   - This acts as a visual queu to the user for the number of attempts left  to guess the word and helps to portray the gravity of the situation. 
 
-![The Hangman Stockade](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/stockade-1.png)(https://p1g30n17.github.io/hangman/assets/readme-media/stockade-2.png)
+![The Hangman Stockade](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/stockade-1.png)(https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/stockade-2.png)
 
 - __The word to guess__
 
@@ -51,7 +51,7 @@ The Hangman game is a simple one page project, where the user is presented with 
   - The hint button disappears upon click and the hint remains on screen until the user either is succesful or not.
   - Upon a new game iniating the hint disappears for the old word and the hint button returns linked to the new word hint.
 
-![Hint Button and hint text](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/hint-1.png)(https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/hint-2.png)
+![Hint Button and hint text](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/hint-1.png)(https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/hint-2.png)
 
 - __The onscreen keyboard__
 
@@ -59,7 +59,7 @@ The Hangman game is a simple one page project, where the user is presented with 
   - The user is given the ability to select a letter from an onscreen keyboard representing the english alphabet.
   - Once a key is clicked, whether it is right or wrong for the hidden word, it is then grey out and unclickable so as to avoid a user using up for than one attempt on a repeated letter.
 
-![The onscreen keyboard](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/keyboard.png)
+![The onscreen keyboard](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/keyboard.png)
 
 - __Victory and Game Over message__
 
@@ -67,7 +67,7 @@ The Hangman game is a simple one page project, where the user is presented with 
 - Once the user has failed to guess the correct word within the given attempts limit, they are shown a game over message.
 - Both messages offer a 'Play again' and 'Try again' button respectively that will reset the game, choose a new hidden word and hide the hint text (if clicked previously).
 
-![Victory and Game Over message](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/victory.png)(https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/game-over.png)
+![Victory and Game Over message](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/victory.png)(https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/game-over.png)
 
 ### Features Left to Implement
 
@@ -83,13 +83,13 @@ The Hangman game is a simple one page project, where the user is presented with 
 - The project is responsive in almost all dimensions bar a few outliers such as a smart watch.
 - This was achieved in a sense due to the simplicity of the game, the game container scales to almost all device sizes allowing multiple platforms to play the game.
 
-![Responsive Mockup](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/viewports.png)
+![Responsive Mockup](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/viewports.png)
 
 ### Web Browser Testing
 
 - The project obtained a great lighthouse rating with the Google Lighthouse Dev Tool.
 
-![Lighthouse Score](https://p1g30n17.github.io/hangman/tree/main/assets/readme-media/lighthouse.png)
+![Lighthouse Score](https://github.com/P1G30N17/hangman/blob/main/assets/readme-media/lighthouse.png)
 
 - The various web browsers the project was tested on had mostly optimal results, with little to no errors between all 3.
 
