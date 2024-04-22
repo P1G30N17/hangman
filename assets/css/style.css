@@ -67,14 +67,14 @@ body {
 }
 
 /* Hint and attempts styling */
-.game-box h4 {
+.game-box p {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 20px;
 }
 
-.game-box h4 b {
+.game-box p b {
     font-weight: 600;
 }
 
