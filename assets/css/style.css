@@ -137,6 +137,17 @@ button:hover {
     pointer-events: none;
 }
 
+/* Media Query for mobile devices 899px and less */
+@media screen and (max-width: 899px) {
+    body {
+        background: #fff;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
 /* Media Query for smaller devices */
 @media screen and (max-width: 424px) {
     .stockade-box img {
