@@ -44,4 +44,36 @@ const wordList = [
         word: "school",
         hint: "An institution for educating children."
     },
+    {
+        word: "river",
+        hint: "A large natural stream of water flowing in a channel."
+    },
+    {
+        word: "treehouse",
+        hint: "A structure built among the branches of a tree."
+    },
+    {
+        word: "xylophone",
+        hint: "A musical instrument played by striking a row of wooden bars with one or more beaters."
+    },
+    {
+        word: "foxglove",
+        hint: "A tall, thin plant with white, yellow, pink, red, or purple bell-shaped flowers growing all the way up its stem"
+    },
+    {
+        word: "galaxy",
+        hint: "A system of millions or billions of stars, together with gas and dust, held together by gravitational attraction."
+    },
+    {
+        word: "stronghold",
+        hint: "A building or position that is strongly defended."
+    },
+    {
+        word: "flapjack",
+        hint: "A sweet dense cake made from oats, golden syrup, and melted butter, served in rectangles."
+    },
+    {
+        word: "microwave",
+        hint: "An electric oven that uses waves of energy to cook or heat food quickly."
+    },
 ];
