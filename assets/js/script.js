@@ -6,11 +6,13 @@ const hangmanStockImage = document.querySelector(".stockade-box img");
 let chosenWord;
 let wrongGuessCount;
 let numberOfLetters;
+let newNum = 0;
+let oldNum = 0;
 const maxGuesses = 6;
 
 /** 
-*Resets the game and all parameters
-*/
+ *Resets the game and all parameters
+ */
 function resetGame() {
     numberOfLetters = [];
     wrongGuessCount = 6;
@@ -18,20 +20,36 @@ function resetGame() {
     attemptsText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
     document.querySelector(".help-text").style.display = "none";
     document.querySelector(".help-div").style.display = "flex";
-    guessWord.innerHTML = chosenWord.split("").map(function() {return `<li class="guess-letter"></li>`}).join("");
-    screenKeyboardDiv.querySelectorAll("button").forEach(function(button) {button.disabled = false});
+    guessWord.innerHTML = chosenWord.split("").map(function () {
+        return `<li class="guess-letter"></li>`
+    }).join("");
+    screenKeyboardDiv.querySelectorAll("button").forEach(function (button) {
+        button.disabled = false
+    });
 }
 
 /**
  * Selects a random word and corresponding hint from wordList.js
  */
 function getRandomWord() {
-    const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)];
-    chosenWord = word;
-    // Creates list of the words length and inserts the guessWord letters into the list.
-    guessWord.innerHTML = word.split("").map(function() {return `<li class="guess-letter"></li>`}).join("");
-    document.querySelector(".help-text b").innerText = hint; 
-    resetGame();
+    newNum = Math.floor(Math.random() * wordList.length);
+    // Eliminates the chance of the same word being played twice in a row.
+    if (newNum === oldNum) {
+        newNum = Math.floor(wordList.length * Math.random());
+    } else {
+        const {
+            word,
+            hint
+        } = wordList[newNum];
+        chosenWord = word;
+        // Creates list of the words length and inserts the guessWord letters into the list.
+        guessWord.innerHTML = word.split("").map(function () {
+            return `<li class="guess-letter"></li>`
+        }).join("");
+        document.querySelector(".help-text b").innerText = hint;
+        resetGame();
+        oldNum = newNum;
+    }
 }
 
 
@@ -41,7 +59,7 @@ function getRandomWord() {
  * @param {*} clickedLetter 
  */
 function runGame(button, clickedLetter) {
-    if(chosenWord.includes(clickedLetter)) {
+    if (chosenWord.includes(clickedLetter)) {
         //Displays the correct guessed letters in the hidden word area.
         [...chosenWord].forEach(function (letter, index) {
             if (letter === clickedLetter) {
@@ -51,7 +69,7 @@ function runGame(button, clickedLetter) {
             }
         });
     } else {
-        wrongGuessCount --;
+        wrongGuessCount--;
         hangmanStockImage.src = `assets/images/hangman-${wrongGuessCount}.png`;
     }
     button.disabled = true;
@@ -61,7 +79,7 @@ function runGame(button, clickedLetter) {
         Swal.fire({
             title: "Unlucky. The word was " + chosenWord,
             confirmButtonText: "Try Again"
-          });
+        });
         resetGame();
         getRandomWord();
     }
@@ -69,7 +87,7 @@ function runGame(button, clickedLetter) {
         Swal.fire({
             title: "Congratulations. The word was " + chosenWord,
             confirmButtonText: "Play Again"
-          });
+        });
         resetGame();
         getRandomWord();
     }
@@ -77,14 +95,16 @@ function runGame(button, clickedLetter) {
 
 // Dynamically creating keyboard and adding event listeners
 for (let i = 1; i <= 26; i++) {
-    const button = document.createElement("button"); 
+    const button = document.createElement("button");
     /*  String.fromCharCode is a static method that returns a string created 
         from the specified sequence of UTF-16 code units.
         97 is 'a' and 122 is 'z' on the ASCII table.
     */
-    button.innerText = String.fromCharCode(96+i); 
-    screenKeyboardDiv.appendChild(button); 
-    button.addEventListener("click", function (event) {runGame(event.target, String.fromCharCode(96+i))});
+    button.innerText = String.fromCharCode(96 + i);
+    screenKeyboardDiv.appendChild(button);
+    button.addEventListener("click", function (event) {
+        runGame(event.target, String.fromCharCode(96 + i))
+    });
 }
 
 getRandomWord();
