@@ -104,7 +104,7 @@ The Hangman game is a simple one page project, where the user is presented with 
 
 ### Bugs
 
-- I have found on the rare occasion that the game will load the same word twice in a row. This is due to the word being selected randomly from a list of words. As the size of the list is increased the probability of this bug occuring will be less but not zero. A potential fix could be to add an if statement remembering the numbers of previous words pulled from the list and excluding those from future word pulls.
+- I had found that on the rare occasion the game will load the same word twice in a row. This was due to the word being selected randomly from a list of words. As the size of the list is increased the probability of this bug occuring will be less but not zero. (This Bug was fixed by adding a tracker to the random word selected and then using an if/else statement to prevent it from being pulled directly after a round was over).
 
 ### Validator Testing 
 
@@ -119,7 +119,7 @@ The Hangman game is a simple one page project, where the user is presented with 
 
 ### Unfixed Bugs
 
-- As stated in the previous bugs section, the potential for the same word to be selected twice. 
+- None that I am aware of. 
 
 ## Deployment
 
